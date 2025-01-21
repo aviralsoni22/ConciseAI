@@ -29,8 +29,10 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise ValueError("yaml file is empty")
     except Exception as e:
         raise e
+
+
 @ensure_annotations
-def create_dictionaries(path_to_directories: list, verbose=True):
+def create_directories(path_to_directories: list, verbose=True):
     """
     Create a list of directories
     Args:
