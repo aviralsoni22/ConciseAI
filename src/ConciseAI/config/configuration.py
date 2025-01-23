@@ -1,6 +1,6 @@
 from src.ConciseAI.constants import *
 from src.ConciseAI.utils.common import read_yaml, create_directories
-from src.ConciseAI.entity import DataIngestionConfig, DataTransformationConfig, ModelTrainerConfig
+from src.ConciseAI.entity import ModelEvaluationConfig, DataIngestionConfig, DataTransformationConfig, ModelTrainerConfig
 class ConfigurationManager:
     def __init__(self,
                  config_path=Path(r"D:\\VIT Vellore\\ML\\ConciseAI\\config\\config.yaml"), #CONFIG_FILE_PATH,
@@ -56,3 +56,29 @@ class ConfigurationManager:
             gradient_accumulation_steps = params.gradient_accumulation_steps
         )
         return model_trainer_config
+
+    def __init__(
+        self,
+        config_filepath=Path(r"D:\\VIT Vellore\\ML\\ConciseAI\\config\\config.yaml"), #CONFIG_FILE_PATH
+        params_filepath=Path(r"D:\\VIT Vellore\\ML\\ConciseAI\\params.yaml",)): #PARAMS_FILE_PATH
+
+        self.config = read_yaml(config_filepath)
+        self.params = read_yaml(params_filepath)
+
+        create_directories([self.config.artifacts_root])
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            model_path = config.model_path,
+            tokenizer_path = config.tokenizer_path,
+            metric_file_name = config.metric_file_name
+            
+        )
+
+        return model_evaluation_config

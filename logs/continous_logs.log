@@ -105,3 +105,205 @@
 [2025-01-23 14:47:13,592: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
 [2025-01-23 14:47:13,593: INFO : common : created directory at: artifacts]
 [2025-01-23 14:47:13,594: INFO : common : created directory at: artifacts/model_evaluation]
+[2025-01-23 14:47:38,009: INFO : config : PyTorch version 2.5.1 available.]
+[2025-01-23 14:47:41,877: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 14:47:41,880: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 14:47:41,881: INFO : common : created directory at: artifacts]
+[2025-01-23 14:47:41,882: INFO : common : created directory at: artifacts/model_evaluation]
+[2025-01-23 14:49:55,655: INFO : rouge_scorer : Using default tokenizer.]
+[2025-01-23 15:09:21,169: INFO : config : PyTorch version 2.5.1 available.]
+[2025-01-23 15:09:22,306: INFO : main : stageData Ingestion stage Initiated]
+[2025-01-23 15:09:22,315: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:09:22,321: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:09:22,323: INFO : common : created directory at: artifacts]
+[2025-01-23 15:09:22,324: INFO : common : created directory at: artifacts/data_ingestion]
+[2025-01-23 15:09:22,324: INFO : data_ingestion : File already exists]
+[2025-01-23 15:09:22,431: INFO : main : Stage Data Ingestion stage Completed]
+[2025-01-23 15:09:22,431: INFO : main : stageData Transformation Stage Initiated]
+[2025-01-23 15:09:22,435: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:09:22,436: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:09:22,437: INFO : common : created directory at: artifacts]
+[2025-01-23 15:09:22,438: INFO : common : created directory at: artifacts/data_transformation]
+[2025-01-23 15:09:24,110: ERROR : main : [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow']
+Traceback (most recent call last):
+  File "D:\VIT Vellore\ML\ConciseAI\main.py", line 23, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\pipeline\stage_2_data_transformtion_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation.convert()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\components\data_transformation.py", line 28, in convert
+    dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\dataset_dict.py", line 1284, in save_to_disk
+    dataset.save_to_disk(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1560, in save_to_disk
+    for job_id, done, content in Dataset._save_to_disk_single(**kwargs):
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1584, in _save_to_disk_single
+    writer = ArrowWriter(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_writer.py", line 373, in __init__
+    self.stream = self._fs.open(path, "wb")
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\spec.py", line 1303, in open
+    f = self._open(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 195, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 359, in __init__
+    self._open()
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 364, in _open
+    self.f = open(self.path, mode=self.mode)
+OSError: [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow'
+[2025-01-23 15:14:31,388: INFO : config : PyTorch version 2.5.1 available.]
+[2025-01-23 15:14:31,839: INFO : main : stageData Ingestion stage Initiated]
+[2025-01-23 15:14:31,842: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:14:31,843: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:14:31,844: INFO : common : created directory at: artifacts]
+[2025-01-23 15:14:31,844: INFO : common : created directory at: artifacts/data_ingestion]
+[2025-01-23 15:14:31,845: INFO : data_ingestion : File already exists]
+[2025-01-23 15:14:31,945: INFO : main : Stage Data Ingestion stage Completed]
+[2025-01-23 15:14:31,946: INFO : main : stageData Transformation Stage Initiated]
+[2025-01-23 15:14:31,949: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:14:31,950: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:14:31,951: INFO : common : created directory at: artifacts]
+[2025-01-23 15:14:31,952: INFO : common : created directory at: artifacts/data_transformation]
+[2025-01-23 15:14:33,877: ERROR : main : [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow']
+Traceback (most recent call last):
+  File "D:\VIT Vellore\ML\ConciseAI\main.py", line 23, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\pipeline\stage_2_data_transformtion_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation.convert()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\components\data_transformation.py", line 30, in convert
+    dataset_samsum_pt.save_to_disk(save_path)
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\dataset_dict.py", line 1284, in save_to_disk
+    dataset.save_to_disk(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1560, in save_to_disk
+    for job_id, done, content in Dataset._save_to_disk_single(**kwargs):
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1584, in _save_to_disk_single
+    writer = ArrowWriter(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_writer.py", line 373, in __init__
+    self.stream = self._fs.open(path, "wb")
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\spec.py", line 1303, in open
+    f = self._open(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 195, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 359, in __init__
+    self._open()
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 364, in _open
+    self.f = open(self.path, mode=self.mode)
+OSError: [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow'
+[2025-01-23 15:15:04,289: INFO : config : PyTorch version 2.5.1 available.]
+[2025-01-23 15:15:04,738: INFO : main : stageData Ingestion stage Initiated]
+[2025-01-23 15:15:04,741: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:15:04,743: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:15:04,743: INFO : common : created directory at: artifacts]
+[2025-01-23 15:15:04,744: INFO : common : created directory at: artifacts/data_ingestion]
+[2025-01-23 15:15:04,744: INFO : data_ingestion : File already exists]
+[2025-01-23 15:15:04,840: INFO : main : Stage Data Ingestion stage Completed]
+[2025-01-23 15:15:04,840: INFO : main : stageData Transformation Stage Initiated]
+[2025-01-23 15:15:04,843: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:15:04,845: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:15:04,846: INFO : common : created directory at: artifacts]
+[2025-01-23 15:15:04,846: INFO : common : created directory at: artifacts/data_transformation]
+[2025-01-23 15:15:06,189: ERROR : main : [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow']
+Traceback (most recent call last):
+  File "D:\VIT Vellore\ML\ConciseAI\main.py", line 23, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\pipeline\stage_2_data_transformtion_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation.convert()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\components\data_transformation.py", line 30, in convert
+    dataset_samsum_pt.save_to_disk(save_path)
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\dataset_dict.py", line 1284, in save_to_disk
+    dataset.save_to_disk(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1560, in save_to_disk
+    for job_id, done, content in Dataset._save_to_disk_single(**kwargs):
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1584, in _save_to_disk_single
+    writer = ArrowWriter(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_writer.py", line 373, in __init__
+    self.stream = self._fs.open(path, "wb")
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\spec.py", line 1303, in open
+    f = self._open(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 195, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 359, in __init__
+    self._open()
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 364, in _open
+    self.f = open(self.path, mode=self.mode)
+OSError: [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow'
+[2025-01-23 15:31:03,840: INFO : config : PyTorch version 2.5.1 available.]
+[2025-01-23 15:31:04,306: INFO : main : stageData Ingestion stage Initiated]
+[2025-01-23 15:31:04,310: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:31:04,312: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:31:04,312: INFO : common : created directory at: artifacts]
+[2025-01-23 15:31:04,312: INFO : common : created directory at: artifacts/data_ingestion]
+[2025-01-23 15:31:04,313: INFO : data_ingestion : File already exists]
+[2025-01-23 15:31:04,404: INFO : main : Stage Data Ingestion stage Completed]
+[2025-01-23 15:31:04,404: INFO : main : stageData Transformation Stage Initiated]
+[2025-01-23 15:31:04,407: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\config\config.yaml loaded successfully]
+[2025-01-23 15:31:04,409: INFO : common : yaml file: D:\VIT Vellore\ML\ConciseAI\params.yaml loaded successfully]
+[2025-01-23 15:31:04,409: INFO : common : created directory at: artifacts]
+[2025-01-23 15:31:04,410: INFO : common : created directory at: artifacts/data_transformation]
+[2025-01-23 15:31:05,741: ERROR : main : [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow']
+Traceback (most recent call last):
+  File "D:\VIT Vellore\ML\ConciseAI\main.py", line 23, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\pipeline\stage_2_data_transformtion_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation.convert()
+  File "D:\VIT Vellore\ML\ConciseAI\src\ConciseAI\components\data_transformation.py", line 28, in convert
+    dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\dataset_dict.py", line 1284, in save_to_disk
+    dataset.save_to_disk(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1560, in save_to_disk
+    for job_id, done, content in Dataset._save_to_disk_single(**kwargs):
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_dataset.py", line 1584, in _save_to_disk_single
+    writer = ArrowWriter(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\datasets\arrow_writer.py", line 373, in __init__
+    self.stream = self._fs.open(path, "wb")
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\spec.py", line 1303, in open
+    f = self._open(
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 195, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 359, in __init__
+    self._open()
+  File "D:\VIT Vellore\ML\ConciseAI\venv\lib\site-packages\fsspec\implementations\local.py", line 364, in _open
+    self.f = open(self.path, mode=self.mode)
+OSError: [Errno 22] Invalid argument: 'D:/VIT Vellore/ML/ConciseAI/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow'
+[2025-01-23 15:43:06,142: INFO : server : Started server process [13160]]
+[2025-01-23 15:43:06,143: INFO : on : Waiting for application startup.]
+[2025-01-23 15:43:06,144: INFO : on : Application startup complete.]
+[2025-01-23 15:43:06,145: ERROR : server : [Errno 10013] error while attempting to bind on address ('0.0.0.0', 8080): an attempt was made to access a socket in a way forbidden by its access permissions]
+[2025-01-23 15:43:06,145: INFO : on : Waiting for application shutdown.]
+[2025-01-23 15:43:06,146: INFO : on : Application shutdown complete.]
+[2025-01-23 15:44:26,613: INFO : server : Started server process [11232]]
+[2025-01-23 15:44:26,614: INFO : on : Waiting for application startup.]
+[2025-01-23 15:44:26,614: INFO : on : Application startup complete.]
+[2025-01-23 15:44:26,615: ERROR : server : [Errno 10013] error while attempting to bind on address ('0.0.0.0', 8080): an attempt was made to access a socket in a way forbidden by its access permissions]
+[2025-01-23 15:44:26,615: INFO : on : Waiting for application shutdown.]
+[2025-01-23 15:44:26,615: INFO : on : Application shutdown complete.]
+[2025-01-23 15:47:13,162: INFO : server : Started server process [21008]]
+[2025-01-23 15:47:13,163: INFO : on : Waiting for application startup.]
+[2025-01-23 15:47:13,164: INFO : on : Application startup complete.]
+[2025-01-23 15:47:13,165: INFO : server : Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-01-23 15:47:45,589: INFO : server : Shutting down]
+[2025-01-23 15:47:45,700: INFO : on : Waiting for application shutdown.]
+[2025-01-23 15:47:45,701: INFO : on : Application shutdown complete.]
+[2025-01-23 15:47:45,701: INFO : server : Finished server process [21008]]
+[2025-01-23 15:48:32,559: INFO : server : Started server process [26868]]
+[2025-01-23 15:48:32,560: INFO : on : Waiting for application startup.]
+[2025-01-23 15:48:32,560: INFO : on : Application startup complete.]
+[2025-01-23 15:48:32,561: INFO : server : Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-01-23 15:53:49,588: INFO : server : Shutting down]
+[2025-01-23 15:53:49,696: INFO : on : Waiting for application shutdown.]
+[2025-01-23 15:53:49,696: INFO : on : Application shutdown complete.]
+[2025-01-23 15:53:49,696: INFO : server : Finished server process [26868]]
+[2025-01-23 15:53:57,556: INFO : server : Started server process [14900]]
+[2025-01-23 15:53:57,557: INFO : on : Waiting for application startup.]
+[2025-01-23 15:53:57,557: INFO : on : Application startup complete.]
+[2025-01-23 15:53:57,558: INFO : server : Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)]
+[2025-01-23 15:55:53,395: INFO : server : Shutting down]
+[2025-01-23 15:55:53,501: INFO : on : Waiting for application shutdown.]
+[2025-01-23 15:55:53,501: INFO : on : Application shutdown complete.]
+[2025-01-23 15:55:53,502: INFO : server : Finished server process [14900]]
+[2025-01-23 15:56:05,950: INFO : server : Started server process [31048]]
+[2025-01-23 15:56:05,951: INFO : on : Waiting for application startup.]
+[2025-01-23 15:56:05,951: INFO : on : Application startup complete.]
+[2025-01-23 15:56:05,951: INFO : server : Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-01-23 15:56:19,853: INFO : server : Shutting down]
+[2025-01-23 15:56:19,960: INFO : on : Waiting for application shutdown.]
+[2025-01-23 15:56:19,961: INFO : on : Application shutdown complete.]
+[2025-01-23 15:56:19,961: INFO : server : Finished server process [31048]]
